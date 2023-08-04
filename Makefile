@@ -41,7 +41,7 @@ env:
 build:
 	git submodule update --init --recursive
 	mkdir -p build
-	cd build; cmake ..; $(MAKE)
+	cd build; cmake -DCMAKE_BUILD_TYPE=Release ..; $(MAKE)
 
 install:
 	cd build; $(MAKE) DESTDIR=${INSTALL_DIR} install
@@ -60,7 +60,7 @@ test-py:
 
 test-cpp:
 	mkdir -p build
-	cd build && cmake -DPRJXRAY_BUILD_TESTING=ON ..
+	cd build && cmake -DPRJXRAY_BUILD_TESTING=ON -DCMAKE_BUILD_TYPE=Release ..
 	cd build && $(MAKE) -s
 	cd build && ctest --no-compress-output -T Test -C RelWithDebInfo --output-on-failure
 	xsltproc .github/ctest2junit.xsl build/Testing/*/Test.xml > build/cpp_test_results.xml

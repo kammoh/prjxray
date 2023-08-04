@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.5.0)
 
+set(CMAKE_CXX_STANDARD 14)
+
 project(prjxray)
 option(PRJXRAY_BUILD_TESTING "" OFF)
 

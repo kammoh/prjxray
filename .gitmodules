@@ -28,3 +28,6 @@
 [submodule "third_party/display_port"]
 	path = third_party/display_port
 	url = https://github.com/hamsternz/DisplayPort_Verilog.git
+[submodule "prjxray-db"]
+	path = database
+	url = https://github.com/openXC7/prjxray-db.git

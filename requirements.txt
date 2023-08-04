@@ -13,7 +13,7 @@ scipy>=1.2.1
 simplejson
 sympy
 textx
-yapf==0.24.0
+yapf>=0.24.0
 
 # Third party
 -e third_party/fasm
